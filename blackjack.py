@@ -84,6 +84,10 @@ class BlackJack:
             for player in potential_winners:
                 if player.hand_score() > self.dealer.hand_score():
                     print(f'{player.name} has won!')
+                # Added else clause below for case where dealer has winning hand that is less than 21
+                else:
+                    print('Dealer has won!')
+
 
 class Card:
 
